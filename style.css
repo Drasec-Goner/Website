@@ -22,6 +22,17 @@ body{
     background: var(--bg-color);
     color: var(--text-color);
 }
+.loader{
+    height: 100vh;
+    width: 100%;
+    z-index: 100000;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #082032;
+}
+
 header{
     position: fixed;
     width: 100%;
@@ -78,7 +89,7 @@ section{
     position: relative;
     height: 100vh;
     width: 100%;
-    background-image: url(Assets/Images/myself.jpg);
+    background-image: url(Assets/Images/myself1.jpg);
     background-size: cover;
     background-position: center;
     display: flex;
@@ -527,3 +538,65 @@ header.sticky{
         top: 100;
     }
 }
+
+/* .wrapper {
+    display: flex;
+}
+
+.wrapper .static-txt{
+    color: #fff;
+    font-size: 60px;
+    font-weight: 400;
+}
+
+.dynamic-txts li{
+    list-style: none;
+    color: #ff4c29;
+    font-size: 60px;
+    font-weight: 500;
+    position: relative;
+}
+.wrapper .dynamic-txts{
+    margin-left: 15px;
+    line-height: 90px;
+    height: 90px;
+    overflow: hidden;
+}
+.dynamic-txts li{
+    list-style: none;
+    color: var(--main-color);
+    font-size: 60px;
+    font-weight: 500;
+    top: 0;
+    position: relative;
+    animation: slide 12s steps(4) infinite;
+}
+
+@keyframes slide {
+    100%{
+        top: -360px;
+    }    
+}
+
+.dynamic-txts li {
+    position: relative;
+}
+.dynamic-txts li::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #082032;
+    border-left: 2px solid var(--main-color);
+    animation: typing 3s steps(10) infinite;
+}
+
+@keyframes typing {
+    40%, 60% {
+        left: calc(100% + 30px);
+    }
+    100% {
+        left: 0;
+    }
+} */
