@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+ }
+ :root{
+	--bg-color: #2a2a2a;
+	--second-bg-color: #202020;
+	--text-color: #fff;
+	--second-color: #ccc;
+	--main-color: #ff4d05;
+	--big-font: 5rem;
+	--h2-font: 3rem;
+	--p-font: 1.1rem;
+}
+ 
+ .loader{
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #082032;
+}
+
+.wrapper {
+    display: flex;
+    scale: 1.0;
+    transition: scale 2s;
+}
+.wrapper:hover{
+    scale: 1.2;
+}
+
+.wrapper .static-txt{
+    color: #fff;
+    font-size: 60px;
+    font-weight: 400;
+}
+
+.dynamic-txts li{
+    list-style: none;
+    color: #ff4c29;
+    font-size: 60px;
+    font-weight: 500;
+    position: relative;
+}
+.wrapper .dynamic-txts{
+    margin-left: 15px;
+    line-height: 90px;
+    height: 90px;
+    overflow: hidden;
+}
+.dynamic-txts li{
+    list-style: none;
+    color: var(--main-color);
+    font-size: 60px;
+    font-weight: 500;
+    top: 0;
+    position: relative;
+    animation: slide 12s steps(4) infinite;
+}
+
+@keyframes slide {
+    100%{
+        top: -360px;
+    }    
+}
+.dynamic-txts a{
+    text-decoration: none;
+    color: var(--main-color);
+}
+.dynamic-txts li {
+    position: relative;
+}
+.dynamic-txts li::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    background-color: #082032;
+    border-left: 2px solid var(--main-color);
+    animation: typing 3s steps(12) infinite;
+    /* animation-iteration-count: 4; */
+}
+.dynamic-txts li::after{
+    border-left: 2px solid #082032;
+}
+@keyframes typing {
+    40%, 60% {
+        left: calc(100% + 30px);
+    }
+    100% {
+        left: 0;
+    }
+}
+@keyframes hideAnimation {
+    to {
+      visibility: hidden;
+      width: 0;
+      height: 0;
+    }
+}
+.static-txt a{
+    position: relative;
+    text-decoration: none;
+    color: var(--text-color);
+    overflow: hidden;
+    max-width: 500px;
+    cursor: pointer;
+    z-index: 9000;
+}
+
+.static-txt{
+    text-align: center;
+}

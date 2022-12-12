@@ -16,13 +16,3 @@ window.onscroll = () => {
     navlist.classList.remove('open');
 };
 
-
-
-// window.addEventListener("load", () => {
-//     const loader = document.querySelector(".loader");
-//     loader.classList.add("loader--hidden");
-
-//     loader.addEventListener("transitionend", () => {
-//         document.body.removeChild(loader);
-//     });
-// });

@@ -1,8 +1,11 @@
+@font-face {
+    font-family: "Azonix";
+    src: url(/Assets/Azonix.otf)
+}
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
     text-decoration: none;
     list-style: none;
     scroll-behavior: smooth;
@@ -21,16 +24,7 @@
 body{
     background: var(--bg-color);
     color: var(--text-color);
-}
-.loader{
-    height: 100vh;
-    width: 100%;
-    z-index: 100000;
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #082032;
+    font-family: "Poppins", sans-serif;
 }
 
 header{
@@ -59,6 +53,7 @@ span{
 }
 .navlist{
     display: flex;
+    font-family: 'Azonix', sans-serif;
 }
 .navlist a{
     color: var(--second-color);
@@ -118,6 +113,7 @@ section{
     font-weight: 500;
 }
 .home-text h1{
+    font-family: "Azonix", sans-serif;
     font-size: var(--big-font);
     font-weight: 700;
     color: var(--text-color);
@@ -202,7 +198,7 @@ header.sticky{
 }
 .about-text h2{
     font-size: var(--h2-font);
-    line-height: 1;
+    line-height: 1.5;
 }
 .about-text h4{
     font-size: 24px;
@@ -214,7 +210,7 @@ header.sticky{
 .about-text p{
     color: var(--second-color);
     font-size: var(--p-font);
-    line-height: 1.8;
+    line-height: 1.5;
     margin-bottom: 4rem;
 }
 
@@ -237,7 +233,7 @@ header.sticky{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, auto));
     align-items: center;
-    gap: 2.5rem;
+    column-gap: 30px;
     margin-top: 5rem;
 }
 .box{
@@ -275,13 +271,31 @@ header.sticky{
 .read:hover{
     letter-spacing: 1px;
     background: #ffffff99;
-    color: var(--text-color);
+    color: var(--second-bg-color);
 }
 .box:hover{
     transform: translateY(-8px);
     cursor: pointer;
+    background: var(--main-color);
 }
-
+.view{
+    border: 2px solid var(--main-color);
+    display: block;
+    text-align: center;
+    width: 20%;
+    padding: 5px 30px;
+    background: var(--second-bg-color);
+    margin: auto;
+    margin-top: 20px;
+    scale: 1.0;
+    transition: .45s;
+}
+.view:hover{
+    cursor: pointer;
+    background: var(--main-color);
+    color: var(--second-bg-color);
+    scale: 1.1;
+}
 .portfolio-content{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, auto));
@@ -304,7 +318,7 @@ header.sticky{
 .layer{
     width: 100%;
     height: 0;
-    background: linear-gradient(rgba(0,0,0,0.1), #ff004f);
+    background: linear-gradient(rgba(0,0,0,0.1), #5a0923);
     position: absolute;
     border-radius: 8px;
     left: 0;
@@ -539,64 +553,4 @@ header.sticky{
     }
 }
 
-/* .wrapper {
-    display: flex;
-}
 
-.wrapper .static-txt{
-    color: #fff;
-    font-size: 60px;
-    font-weight: 400;
-}
-
-.dynamic-txts li{
-    list-style: none;
-    color: #ff4c29;
-    font-size: 60px;
-    font-weight: 500;
-    position: relative;
-}
-.wrapper .dynamic-txts{
-    margin-left: 15px;
-    line-height: 90px;
-    height: 90px;
-    overflow: hidden;
-}
-.dynamic-txts li{
-    list-style: none;
-    color: var(--main-color);
-    font-size: 60px;
-    font-weight: 500;
-    top: 0;
-    position: relative;
-    animation: slide 12s steps(4) infinite;
-}
-
-@keyframes slide {
-    100%{
-        top: -360px;
-    }    
-}
-
-.dynamic-txts li {
-    position: relative;
-}
-.dynamic-txts li::after{
-    content: "";
-    position: absolute;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: #082032;
-    border-left: 2px solid var(--main-color);
-    animation: typing 3s steps(10) infinite;
-}
-
-@keyframes typing {
-    40%, 60% {
-        left: calc(100% + 30px);
-    }
-    100% {
-        left: 0;
-    }
-} */
